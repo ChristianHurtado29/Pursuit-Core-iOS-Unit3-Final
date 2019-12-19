@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1338ABED23AC09F10078E25F /* DetailElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338ABEC23AC09F10078E25F /* DetailElementsViewController.swift */; };
+		1338ABEF23AC1A480078E25F /* UIViewController + Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338ABEE23AC1A480078E25F /* UIViewController + Alerts.swift */; };
 		1348B7B223ABD3F300409E01 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1348B7B123ABD3F300409E01 /* AppError.swift */; };
 		1348B7B423ABD43700409E01 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1348B7B323ABD43700409E01 /* NetworkHelper.swift */; };
 		1348B7B623ABD52B00409E01 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1348B7B523ABD52B00409E01 /* Element.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1338ABEC23AC09F10078E25F /* DetailElementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailElementsViewController.swift; sourceTree = "<group>"; };
+		1338ABEE23AC1A480078E25F /* UIViewController + Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Alerts.swift"; sourceTree = "<group>"; };
 		1348B7B123ABD3F300409E01 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		1348B7B323ABD43700409E01 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		1348B7B523ABD52B00409E01 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -67,8 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				5734756321DA90C700FB6177 /* ElementsVC.swift */,
+				1338ABEC23AC09F10078E25F /* DetailElementsViewController.swift */,
 				1348B7B723ABD76F00409E01 /* ElementsAPI.swift */,
 				5734756521DA90C700FB6177 /* Main.storyboard */,
+				1338ABEE23AC1A480078E25F /* UIViewController + Alerts.swift */,
 				1348B7B523ABD52B00409E01 /* Element.swift */,
 				1348B7B923ABDBE500409E01 /* ElementCell.swift */,
 				5734757321DA90F500FB6177 /* Supporting Files */,
@@ -164,11 +170,13 @@
 				1348B7BA23ABDBE500409E01 /* ElementCell.swift in Sources */,
 				1348B7B423ABD43700409E01 /* NetworkHelper.swift in Sources */,
 				5734756421DA90C700FB6177 /* ElementsVC.swift in Sources */,
+				1338ABED23AC09F10078E25F /* DetailElementsViewController.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
 				1348B7BC23ABE83D00409E01 /* UIImageView + Extension.swift in Sources */,
 				1348B7B823ABD76F00409E01 /* ElementsAPI.swift in Sources */,
 				1348B7B223ABD3F300409E01 /* AppError.swift in Sources */,
 				1348B7B623ABD52B00409E01 /* Element.swift in Sources */,
+				1338ABEF23AC1A480078E25F /* UIViewController + Alerts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

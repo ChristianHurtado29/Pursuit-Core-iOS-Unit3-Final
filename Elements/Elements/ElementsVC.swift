@@ -27,8 +27,17 @@ class ElementsVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         loadData()
-    
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailedElementVC = segue.destination as? DetailElementsViewController,
+        let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not segue")
+        }
+        let element = elements[indexPath.row]
+        detailedElementVC.element = element
+    }
+    
     
     func loadData() {
         ElementsSearchAPIClient.getElements(for: elements) {[weak self] (result) in
@@ -45,7 +54,9 @@ class ElementsVC: UIViewController {
 extension ElementsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        elements.count
+        
+        navigationItem.title = "There are \(elements.count.description) elements"
+        return elements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

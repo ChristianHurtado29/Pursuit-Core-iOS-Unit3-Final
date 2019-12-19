@@ -21,14 +21,14 @@ struct Element: Codable {
     let favoritedBy: String?
     
     enum CodingKeys: String, CodingKey {
-    case discoveredBy = "discovered_by"
+    case discoveredBy = "discoveredBy"
     case melt = "melt"
     case boil = "boil"
     case symbol = "symbol"
     case name = "name"
     case number = "number"
     case id = "id"
-    case favoritedBy = "favorited_by"
+    case favoritedBy = "favoritedBy"
     case source = "source"
     case atomic_mass = "atomic_mass"
 }
