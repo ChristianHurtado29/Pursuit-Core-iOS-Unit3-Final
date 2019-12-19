@@ -10,9 +10,10 @@ import Foundation
 
 struct ElementsSearchAPIClient {
     static func getElements(for elements: [Element],
-                            completion: @escaping (Result<[Element], AppError>) -> ()) {
+                            completion: @escaping (Result <[Element], AppError>) -> ()) {
         
         let elementEndpointUrl = "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/elements"
+        
         guard let url = URL(string: elementEndpointUrl) else {
             completion(.failure(.badURL(elementEndpointUrl)))
             return
@@ -28,6 +29,7 @@ struct ElementsSearchAPIClient {
                     let elements = try JSONDecoder().decode([Element].self, from: data)
                     completion(.success(elements))
                 } catch {
+                    completion(.failure(.decodingError(error)))
                 }
             }
         }

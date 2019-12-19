@@ -26,11 +26,11 @@ class ElementsVC: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        loadData(for: elements)
-        tableView.reloadData()
+        loadData()
+    
     }
     
-    func loadData(for elements: [Element]) {
+    func loadData() {
         ElementsSearchAPIClient.getElements(for: elements) {[weak self] (result) in
             switch result {
             case .failure(let appError):

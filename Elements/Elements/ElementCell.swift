@@ -29,18 +29,18 @@ class ElementCell: UITableViewCell{
             threeDigCode = element.number.description
         }
      
+        print(threeDigCode)
+        let imageURL = "https://www.theodoregray.com/periodictable/Tiles/\(threeDigCode)/s7.JPG"
         
-        let imageURL = "http://www.theodoregray.com/periodictable/Tiles/\(threeDigCode)/s7.JPG"
-        
-        thumbnailImage.getImage(with: imageURL) { (result) in
+        thumbnailImage.getImage(with: imageURL) { [weak self] (result) in
             switch result {
                 case .failure:
                 DispatchQueue.main.sync {
-                    self.thumbnailImage.image = UIImage(systemName: "person.fill")
+                    self?.thumbnailImage.image = UIImage(systemName: "person.fill")
                 }
             case .success(let image):
                 DispatchQueue.main.sync {
-                    self.thumbnailImage.image = image
+                    self?.thumbnailImage.image = image
                 }
             }
         }
