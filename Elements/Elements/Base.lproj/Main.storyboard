@@ -43,16 +43,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jRl-df-cdz" firstAttribute="leading" secondItem="lbS-8z-tZ5" secondAttribute="trailing" constant="8" id="7CW-Kx-z2W"/>
-                                                <constraint firstItem="WT4-4G-qNR" firstAttribute="top" secondItem="jRl-df-cdz" secondAttribute="bottom" constant="8" id="C5C-Nf-Waf"/>
-                                                <constraint firstItem="lbS-8z-tZ5" firstAttribute="leading" secondItem="n1C-vL-toi" secondAttribute="leading" id="K3c-Ce-0yE"/>
-                                                <constraint firstItem="WT4-4G-qNR" firstAttribute="leading" secondItem="lbS-8z-tZ5" secondAttribute="trailing" constant="8" id="NjR-9n-Wby"/>
-                                                <constraint firstItem="jRl-df-cdz" firstAttribute="top" secondItem="n1C-vL-toi" secondAttribute="topMargin" id="OT0-HW-qHd"/>
-                                                <constraint firstItem="lbS-8z-tZ5" firstAttribute="top" secondItem="n1C-vL-toi" secondAttribute="top" id="UNC-yV-nUa"/>
-                                                <constraint firstAttribute="bottom" secondItem="lbS-8z-tZ5" secondAttribute="bottom" id="bf6-XL-0gP"/>
-                                                <constraint firstItem="lbS-8z-tZ5" firstAttribute="width" secondItem="n1C-vL-toi" secondAttribute="width" multiplier="0.454106" id="cix-TQ-tfc"/>
-                                                <constraint firstItem="jRl-df-cdz" firstAttribute="trailing" secondItem="n1C-vL-toi" secondAttribute="trailingMargin" id="dvQ-DF-xrU"/>
-                                                <constraint firstItem="WT4-4G-qNR" firstAttribute="trailing" secondItem="n1C-vL-toi" secondAttribute="trailingMargin" id="xrz-Jp-36G"/>
+                                                <constraint firstItem="lbS-8z-tZ5" firstAttribute="top" secondItem="n1C-vL-toi" secondAttribute="top" id="18j-nw-4eA"/>
+                                                <constraint firstItem="jRl-df-cdz" firstAttribute="trailing" secondItem="n1C-vL-toi" secondAttribute="trailingMargin" id="GZe-i9-WWY"/>
+                                                <constraint firstItem="WT4-4G-qNR" firstAttribute="top" secondItem="jRl-df-cdz" secondAttribute="bottom" constant="8" id="KSC-c4-Ooq"/>
+                                                <constraint firstItem="lbS-8z-tZ5" firstAttribute="leading" secondItem="n1C-vL-toi" secondAttribute="leading" id="Up0-Ra-DGG"/>
+                                                <constraint firstItem="lbS-8z-tZ5" firstAttribute="width" secondItem="n1C-vL-toi" secondAttribute="width" multiplier="0.454106" id="XDk-zW-NiU"/>
+                                                <constraint firstItem="jRl-df-cdz" firstAttribute="top" secondItem="n1C-vL-toi" secondAttribute="topMargin" id="YM0-ip-jEd"/>
+                                                <constraint firstItem="WT4-4G-qNR" firstAttribute="leading" secondItem="lbS-8z-tZ5" secondAttribute="trailing" constant="8" id="aM5-M5-zWi"/>
+                                                <constraint firstItem="WT4-4G-qNR" firstAttribute="trailing" secondItem="n1C-vL-toi" secondAttribute="trailingMargin" id="dc9-ZC-5GR"/>
+                                                <constraint firstAttribute="bottom" secondItem="lbS-8z-tZ5" secondAttribute="bottom" id="oiO-6H-Uir"/>
+                                                <constraint firstItem="jRl-df-cdz" firstAttribute="leading" secondItem="lbS-8z-tZ5" secondAttribute="trailing" constant="8" id="yMg-x8-jxI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -95,8 +95,8 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="idLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ym8-x7-kiO">
-                                <rect key="frame" x="20" y="118" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="118" width="374" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

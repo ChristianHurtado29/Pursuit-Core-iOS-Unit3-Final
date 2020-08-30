@@ -25,13 +25,13 @@ class DetailElementsViewController: UIViewController {
         weightLabel.text = element?.atomic_mass.description
         numberLabel.text = element?.number.description
         symbolLabel.text = element?.symbol
-        meltingLabel.text = "Melting: \(element!.melt!)"
-        boilingLabel.text = "Boiling: \(element!.boil!)"
+        meltingLabel.text = "Melting: \(element?.melt ?? 0.0)"
+        boilingLabel.text = "Boiling: \(element?.boil ?? 0.0)"
         nameLabel.text = element?.name
         backgroundView.alpha = 0.85
         navigationItem.title = element?.name
         
-        print(element?.name.lowercased())
+//        print(element?.name.lowercased())
         let imageURL = "https://images-of-elements.com/\(element!.name.lowercased()).jpg"
         backgroundView.getImage(with: imageURL) { [weak self] (result) in
             switch result {
@@ -50,9 +50,9 @@ class DetailElementsViewController: UIViewController {
     
     @IBAction func postFave(_ sender: UIBarButtonItem) {
         
-        let favorite = Element(name: element!.name, number: element!.number, symbol: element!.symbol, source: element!.source, atomic_mass: element!.atomic_mass, melt: element?.melt!, boil: element?.boil!, discoveredBy: element?.discoveredBy, id: element?.id, favoritedBy: "Christian Hurtado")
+        let favorite = Element(name: element?.name ?? "no name", number: element?.number ?? 0, symbol: element?.symbol ?? "no symbol", source: element?.source ?? "no source", atomic_mass: element?.atomic_mass ?? 0.0, melt: element?.melt ?? 0.0, boil: element?.boil ?? 0.0, discoveredBy: element?.discoveredBy, id: element?.id, favoritedBy: "Christian Hurtado")
         
-        ElementsSearchAPIClient.postFave(elements: favorite) { [weak self, weak sender ] result in
+        ElementsSearchAPIClient.postFave(elements: favorite) { [weak self] result in
             switch result {
             case .failure(let appError):
                 DispatchQueue.main.async {

@@ -18,10 +18,8 @@ class ElementsVC: UIViewController {
         }
     }
 
-    
     @IBOutlet weak var tableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -37,8 +35,7 @@ class ElementsVC: UIViewController {
         let element = elements[indexPath.row]
         detailedElementVC.element = element
     }
-    
-    
+
     func loadData() {
         ElementsSearchAPIClient.getElements(for: elements) {[weak self] (result) in
             switch result {
@@ -54,7 +51,6 @@ class ElementsVC: UIViewController {
 extension ElementsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         navigationItem.title = "There are \(elements.count.description) elements"
         return elements.count
     }
