@@ -1,0 +1,33 @@
+//
+//  ElementsTests.swift
+//  ElementsTests
+//
+//  Created by Christian Hurtado on 8/30/20.
+//  Copyright © 2020 Pursuit. All rights reserved.
+//
+
+import XCTest
+@testable import Elements
+
+class ElementsTests: XCTestCase {
+    
+    var elements = [Element]()
+    
+    
+    func testNumberOfElements(){
+        var elementsNum = 0
+        let exp = XCTestExpectation(description: "elements found")
+        ElementsSearchAPIClient.getElements(for: elements) { (result) in
+            exp.fulfill()
+            switch result {
+            case .failure(let error):
+                XCTFail("error is \(error)")
+            case .success(let elements):
+                elementsNum = elements.count
+                XCTAssert(elementsNum > 10)
+            }
+        }
+        wait(for: [exp], timeout: 5.0)
+    }
+
+}
