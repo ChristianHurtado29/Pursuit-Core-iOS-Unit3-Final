@@ -13,7 +13,22 @@ class ElementsTests: XCTestCase {
     
     var elements = [Element]()
     
-    
+    func testFirstElement(){
+        var firstElement = ""
+        let exp = XCTestExpectation(description: "elements match")
+        ElementsSearchAPIClient.getElements(for: elements) { (result) in
+            exp.fulfill()
+            switch result {
+            case .failure(let error):
+                XCTFail("\(error)")
+            case .success(let elems):
+                firstElement = elems[0].name
+                XCTAssert(firstElement == "hydrogen")
+            }
+        }
+        wait(for: [exp], timeout: 3.0)
+    }
+
     func testNumberOfElements(){
         var elementsNum = 0
         let exp = XCTestExpectation(description: "elements found")
@@ -29,5 +44,6 @@ class ElementsTests: XCTestCase {
         }
         wait(for: [exp], timeout: 5.0)
     }
+
 
 }
